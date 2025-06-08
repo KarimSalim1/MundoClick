@@ -54,7 +54,7 @@ hr{
 }
 
 .galeria{
-    padding: 2rem;
+    padding: 3rem;
     display: flex;
     flex-wrap: wrap; /* Si el contenido no entra en la fila, pasa a la siguiente */
     justify-content: center;
