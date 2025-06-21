@@ -1,18 +1,18 @@
-/* Estilos generales */
-body {
-  scroll-behavior: smooth;
+body{
+    background-color: #0d1321;
+    height: 100vh;
 }
 
 .bg-principal {
   background-color: #0d1321;
 }
 
-/* Títulos de sección */
+
 .seccion-titulo {
-  font-weight: 700;
+  
   text-transform: uppercase;
   color: #ffffff;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   position: relative;
 }
 .seccion-titulo::after {
@@ -22,10 +22,9 @@ body {
   background-color: #ffc107;
   display: block;
   margin: 10px auto 0;
-  border-radius: 10px;
 }
 
-/* Slider */
+
 #slider img {
   height: 320px;
   object-fit: cover;
@@ -35,7 +34,7 @@ body {
   transform: scale(1.05);
 }
 
-/* --- Transición personalizada en imágenes del carrusel --- */
+
 .img-animada {
   transition: transform 0.8s ease, opacity 0.8s ease;
 }
@@ -47,7 +46,7 @@ body {
   opacity: 0.8;
 }
 
-/* --- Personalización de los indicadores (puntitos) --- */
+
 .carousel-indicators [data-bs-target] {
   background-color: #fff;
   width: 12px;
@@ -63,19 +62,17 @@ body {
   background-color: #00ffe7;
 }
 
-/* --- Flechas del carrusel --- */
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1);
   transform: scale(1.5);
 }
 
-/* Tarjetas de categoría */
+
 .tarjeta-categoria {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  border: none;
   border-radius: 15px;
-  overflow: hidden;
   background: linear-gradient(135deg, #f0f0f0, #ffffff);
 }
 .tarjeta-categoria:hover {
@@ -93,7 +90,6 @@ body {
 .tarjeta-categoria .btn {
   background-color: #1d2d44;
   color: #fff;
-  border: none;
   transition: background 0.3s ease;
 }
 .tarjeta-categoria .btn:hover {
@@ -102,12 +98,10 @@ body {
   font-weight: bold;
 }
 
-/* Tarjetas de producto */
+
 .tarjeta-producto {
   background: linear-gradient(to bottom right, #ffffff, #d0e2ff);
-  border-radius: 15px;
   transition: all 0.4s ease;
-  border: none;
   position: relative;
   overflow: hidden;
 }
@@ -127,25 +121,22 @@ body {
 .tarjeta-producto .btn {
   background-color: #1d2d44;
   color: #fff;
-  border: none;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 .tarjeta-producto .btn:hover {
   background-color: #ffc107;
   color: #1d2d44;
   transform: scale(1.03);
-  font-weight: bold;
 }
 
-/* Publicidad */
+
 .publicidad {
   background: linear-gradient(90deg, #ffc107, #ff8f00);
   color: #1d2d44;
   animation: pulse 2s infinite;
   font-weight: bold;
-  box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
-  border-radius: 15px;
 }
+
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.01); }
