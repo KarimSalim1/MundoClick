@@ -1,40 +1,8 @@
 
-
-
-
-
-
 .magic-footer {
-    position: relative;
-    background: linear-gradient(135deg, #1d2d44, #3e5c76);
-    color: #fff;
+    background: linear-gradient(135deg, #0D1321, #1D2D44);
     padding: 60px 20px 20px;
-    overflow: hidden;
-    z-index: 1;
     animation: gradientShift 10s infinite alternate;
-}
-
-.magic-footer .magic-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    z-index: -1;
-    animation: sparkle 5s infinite;
-}
-
-.magic-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-    opacity: 0.2;
-    z-index: -1;
 }
 
 .footer-content {
@@ -88,9 +56,7 @@
     color: #7e88c2;
 }
 
-.footer-contact h4,
-.footer-links h4,
-.footer-social h4 {
+.footer-contact h4, .footer-links h4, .footer-social h4 {
     font-size: 18px;
     margin-bottom: 15px;
     color: #4e78af;
@@ -139,9 +105,7 @@
     gap: 15px;
 }
 
-.social-links li {
-    margin: 0;
-}
+
 
 .social-links li a {
     display: flex;
@@ -188,33 +152,13 @@
     align-items: center;
 }
 
-.footer-links li {
-    margin: 5px 0;
-}
 
-.footer-links a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #dad748;
-}
-
-
-.footer-content {
-    grid-template-columns: 1fr;
-}
-
-/* Pantallas medianas: mostrar 2 columnas */
 @media (min-width: 576px) {
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Pantallas grandes: mostrar 4 columnas completas */
 @media (min-width: 992px) {
     .footer-content {
         grid-template-columns: repeat(4, 1fr);
