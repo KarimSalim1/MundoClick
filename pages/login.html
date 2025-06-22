@@ -1,4 +1,3 @@
-<!-- login.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -33,6 +32,7 @@
       display: flex;
       max-width: 900px;
       overflow: hidden;
+      width: 100%;
     }
     .login-image {
       flex: 1;
@@ -129,35 +129,51 @@
       text-decoration: none;
       font-weight: bold;
     }
+    .forgot {
+      text-align: right;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+    .forgot a {
+      color: var(--primario);
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <div class="login-container">
+  <main class="login-container">
     <div class="login-image">
-      <img src="../assets/img/logo_MC.png" alt="Logo MundoClick">
+      <img src="../assets/img/logo_MC.png" alt="Logo de MundoClick">
     </div>
     <div class="login-form">
       <h2>Bienvenido a MundoClick</h2>
-      <div class="input-group">
-        <i class="fas fa-user"></i>
-        <input type="email" placeholder="Usuario o Email" required />
-      </div>
-      <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" id="password" placeholder="Contraseña" required />
-        <span class="toggle-password" onclick="togglePassword()">Mostrar</span>
-      </div>
-      <div style="text-align: right; font-size: 0.9em; margin-bottom: 15px;">
-        <a href="#">¿Olvidaste tu contraseña?</a>
-      </div>
-      <button>Iniciar Sesión</button>
-      <button class="btn-social google-btn"><img src="../assets/img/google-icon.png.svg" width="20"> Continuar con Google</button>
-      <button class="btn-social facebook-btn"><img src="../assets/img/facebook-icon.png.svg" width="20"> Continuar con Facebook</button>
-      <div class="extra-links">
-        <p>¿No tenés cuenta? <a href="register.html">Crear una cuenta</a></p>
-      </div>
+      <form>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="email" id="email" name="email" placeholder="Usuario o Email" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="password" name="password" placeholder="Contraseña" required />
+          <span class="toggle-password" onclick="togglePassword()">Mostrar</span>
+        </div>
+        <div class="forgot">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+        <button type="submit">Iniciar Sesión</button>
+        <button type="button" class="btn-social google-btn">
+          <img src="../assets/img/google-icon.png.svg" width="20" alt="Google icon"> Continuar con Google
+        </button>
+        <button type="button" class="btn-social facebook-btn">
+          <img src="../assets/img/facebook-icon.png.svg" width="20" alt="Facebook icon"> Continuar con Facebook
+        </button>
+        <div class="extra-links">
+          <p>¿No tenés cuenta? <a href="register.html">Crear una cuenta</a></p>
+        </div>
+      </form>
     </div>
-  </div>
+  </main>
+
   <script>
     function togglePassword() {
       const pass = document.getElementById("password");
