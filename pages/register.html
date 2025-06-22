@@ -1,342 +1,443 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registro - MundoClick</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    :root {
-      --fondo: #0d1321;
-      --primario: #1d2d44;
-      --acento: #fca311;
-      --claro: #ffffff;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - MundoClick</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      :root {
+        --fondo: #0d1321;
+        --primario: #1d2d44;
+        --acento: #fca311;
+        --claro: #ffffff;
+      }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Lato', sans-serif;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lato", sans-serif;
+      }
 
-    body {
-      background-color: var(--fondo);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
+      body {
+        background-color: var(--fondo);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
 
-    .register-container {
-      background: #f4f4f4;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: row;
-      max-width: 1000px;
-      width: 100%;
-      overflow: hidden;
-      animation: fadeIn 0.8s ease-in-out;
-    }
-
-    .register-image {
-      flex: 1;
-      background: var(--primario);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .register-image img {
-      width: 100%;
-      max-width: 250px;
-      transition: transform 0.6s ease;
-    }
-
-    .register-image img:hover {
-      animation: pulse 0.6s;
-    }
-
-    .register-form {
-      flex: 1;
-      padding: 40px;
-      background-color: #eaeaea;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .register-form h2 {
-      margin-bottom: 15px;
-      font-size: 26px;
-      color: var(--primario);
-      text-align: center;
-    }
-
-    .slogan {
-      text-align: center;
-      font-size: 15px;
-      color: var(--primario);
-      margin-bottom: 25px;
-      font-weight: bold;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .input-group {
-      position: relative;
-      margin-bottom: 15px;
-    }
-
-    .input-group i {
-      position: absolute;
-      left: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #888;
-    }
-
-    .input-group input {
-      width: 100%;
-      padding: 12px 16px 12px 40px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 15px;
-    }
-
-    .input-group input:hover {
-      box-shadow: 0 0 6px var(--acento);
-      transition: 0.3s ease;
-    }
-
-    .toggle-password {
-      position: absolute;
-      right: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-      color: var(--primario);
-      font-size: 13px;
-    }
-
-    .register-form button {
-      background-color: var(--primario);
-      color: var(--claro);
-      border: none;
-      padding: 12px;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-      margin-top: 10px;
-    }
-
-    .register-form button:hover {
-      background-color: #0f1a2d;
-      transform: scale(1.02);
-    }
-
-    .terms {
-      margin: 10px 0;
-      font-size: 14px;
-    }
-
-    .terms label a {
-      color: var(--primario);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .note {
-      font-size: 0.9em;
-      color: #444;
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .note span {
-      color: red;
-    }
-
-    .back-login {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .back-login a {
-      text-decoration: none;
-      color: var(--primario);
-      font-weight: bold;
-    }
-
-    .back-login a:hover {
-      color: var(--acento);
-    }
-
-    .modal {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.5);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
-
-    .modal-content {
-      background-color: #fff;
-      padding: 20px;
-      width: 80%;
-      max-width: 600px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .close {
-      float: right;
-      font-size: 22px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-
-    @media (max-width: 768px) {
       .register-container {
+        background: #f4f4f4;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: row;
+        max-width: 1000px;
+        width: 100%;
+        overflow: hidden;
+        animation: fadeIn 0.8s ease-in-out;
+      }
+
+      .register-image {
+        flex: 1;
+        background: var(--primario);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .register-image img {
+        width: 100%;
+        max-width: 250px;
+        transition: transform 0.6s ease;
+      }
+
+      .register-image img:hover {
+        animation: pulse 0.6s;
+      }
+
+      .register-form {
+        flex: 1;
+        padding: 40px;
+        background-color: #eaeaea;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
       }
-    }
-  </style>
-</head>
-<body>
-  <main class="register-container">
-    <div class="register-image">
-      <img src="../assets/img/logo_MC.png" alt="Logo MundoClick" />
+
+      .register-form h2 {
+        margin-bottom: 15px;
+        font-size: 26px;
+        color: var(--primario);
+        text-align: center;
+      }
+
+      .slogan {
+        text-align: center;
+        font-size: 15px;
+        color: var(--primario);
+        margin-bottom: 25px;
+        font-weight: bold;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .input-group {
+        position: relative;
+        margin-bottom: 15px;
+      }
+
+      .input-group i {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 12px 16px 12px 40px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+      }
+
+      .input-group input:hover {
+        box-shadow: 0 0 6px var(--acento);
+        transition: 0.3s ease;
+      }
+
+      .toggle-password {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: var(--primario);
+        font-size: 13px;
+      }
+
+      .register-form button {
+        background-color: var(--primario);
+        color: var(--claro);
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        margin-top: 10px;
+      }
+
+      .register-form button:hover {
+        background-color: #0f1a2d;
+        transform: scale(1.02);
+      }
+
+      .terms {
+        margin: 10px 0;
+        font-size: 14px;
+      }
+
+      .terms label a {
+        color: var(--primario);
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .note {
+        font-size: 0.9em;
+        color: #444;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .note span {
+        color: red;
+      }
+
+      .back-login {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .back-login a {
+        text-decoration: none;
+        color: var(--primario);
+        font-weight: bold;
+      }
+
+      .back-login a:hover {
+        color: var(--acento);
+      }
+
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        width: 80%;
+        max-width: 600px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .close {
+        float: right;
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .register-container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="register-container">
+      <div class="register-image">
+        <img src="../assets/img/logo_MC.png" alt="Logo MundoClick" />
+      </div>
+
+      <form class="register-form" onsubmit="return validarRegistro()">
+        <h2>Crear una cuenta</h2>
+        <p class="slogan">
+          Tu experiencia comienza aquí. Registrate y descubrí todo lo que
+          MundoClick tiene para vos.
+        </p>
+
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Nombre y Apellido *"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-user-circle"></i>
+          <input
+            type="text"
+            id="usuario"
+            name="usuario"
+            placeholder="Nombre de usuario *"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email *"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-phone"></i>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Teléfono *"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-home"></i>
+          <input
+            type="text"
+            id="domicilio"
+            name="domicilio"
+            placeholder="Domicilio *"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-mail-bulk"></i>
+          <input
+            type="text"
+            id="cp"
+            name="cp"
+            placeholder="Código Postal *"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Contraseña *"
+            required
+            minlength="8"
+          />
+          <span class="toggle-password" onclick="togglePassword()"
+            >Mostrar</span
+          >
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Confirmar contraseña *"
+            required
+          />
+        </div>
+
+        <div class="terms">
+          <input type="checkbox" id="aceptar-terminos" required />
+          <label for="aceptar-terminos">
+            Acepto los
+            <a href="#" onclick="mostrarTerminos()">Términos y Condiciones</a>
+            de MundoClick
+          </label>
+        </div>
+
+        <button type="submit">Registrarse</button>
+
+        <div class="note">
+          <p><span>*</span> Campos obligatorios</p>
+        </div>
+
+        <div class="back-login">
+          <p>¿Ya tenés cuenta? <a href="login.html">Iniciar sesión</a></p>
+        </div>
+      </form>
+    </main>
+
+    <div id="modal-terminos" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h3>Términos y Condiciones de MundoClick</h3>
+        <p>
+          <strong>1. Aceptación del usuario:</strong> Al registrarte en
+          MundoClick, aceptás estos Términos y Condiciones. Si no estás de
+          acuerdo, no uses nuestros servicios.
+        </p>
+        <p>
+          <strong>2. Uso de la plataforma:</strong> Te comprometés a dar datos
+          reales, mantener tu cuenta segura y no usar MundoClick para fines
+          ilegales.
+        </p>
+        <p>
+          <strong>3. Privacidad:</strong> Usamos tus datos solo para ofrecerte
+          el servicio. Nunca los compartimos sin tu permiso salvo obligación
+          legal.
+        </p>
+        <p>
+          <strong>4. Productos y precios:</strong> Pueden cambiar sin previo
+          aviso. No garantizamos stock permanente.
+        </p>
+        <p>
+          <strong>5. Envíos y devoluciones:</strong> Los envíos tienen tiempos
+          estimados. Las devoluciones se permiten si el producto llegó dañado o
+          equivocado.
+        </p>
+        <p>
+          <strong>6. Responsabilidad:</strong> MundoClick no se responsabiliza
+          por daños indirectos o mal uso del sitio.
+        </p>
+        <p>
+          <strong>7. Modificaciones:</strong> Podemos cambiar los términos. Te
+          avisaremos por los medios apropiados.
+        </p>
+      </div>
     </div>
 
-    <form class="register-form" onsubmit="return validarRegistro()">
-      <h2>Crear una cuenta</h2>
-      <p class="slogan">Tu experiencia comienza aquí. Registrate y descubrí todo lo que MundoClick tiene para vos.</p>
-
-      <div class="input-group">
-        <i class="fas fa-user"></i>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido *" required />
-      </div>
-
-      <div class="input-group">
-        <i class="fas fa-user-circle"></i>
-        <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario *" required />
-      </div>
-
-      <div class="input-group">
-        <i class="fas fa-envelope"></i>
-        <input type="email" id="email" name="email" placeholder="Email *" required />
-      </div>
-
-      <div class="input-group">
-        <i class="fas fa-phone"></i>
-        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono *" required />
-      </div>
-
-      <div class="input-group">
-        <i class="fas fa-home"></i>
-        <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio *" required />
-      </div>
-
-      <div class="input-group">
-        <i class="fas fa-mail-bulk"></i>
-        <input type="text" id="cp" name="cp" placeholder="Código Postal *" required />
-      </div>
-
-      <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" id="password" name="password" placeholder="Contraseña *" required minlength="8" />
-        <span class="toggle-password" onclick="togglePassword()">Mostrar</span>
-      </div>
-
-      <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña *" required />
-      </div>
-
-      <div class="terms">
-        <input type="checkbox" id="aceptar-terminos" required />
-        <label for="aceptar-terminos">
-          Acepto los <a href="#" onclick="mostrarTerminos()">Términos y Condiciones</a> de MundoClick
-        </label>
-      </div>
-
-      <button type="submit">Registrarse</button>
-
-      <div class="note">
-        <p><span>*</span> Campos obligatorios</p>
-      </div>
-
-      <div class="back-login">
-        <p>¿Ya tenés cuenta? <a href="login.html">Iniciar sesión</a></p>
-      </div>
-    </form>
-  </main>
-
-  <div id="modal-terminos" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="cerrarModal()">&times;</span>
-      <h3>Términos y Condiciones de MundoClick</h3>
-      <p><strong>1. Aceptación del usuario:</strong> Al registrarte en MundoClick, aceptás estos Términos y Condiciones. Si no estás de acuerdo, no uses nuestros servicios.</p>
-      <p><strong>2. Uso de la plataforma:</strong> Te comprometés a dar datos reales, mantener tu cuenta segura y no usar MundoClick para fines ilegales.</p>
-      <p><strong>3. Privacidad:</strong> Usamos tus datos solo para ofrecerte el servicio. Nunca los compartimos sin tu permiso salvo obligación legal.</p>
-      <p><strong>4. Productos y precios:</strong> Pueden cambiar sin previo aviso. No garantizamos stock permanente.</p>
-      <p><strong>5. Envíos y devoluciones:</strong> Los envíos tienen tiempos estimados. Las devoluciones se permiten si el producto llegó dañado o equivocado.</p>
-      <p><strong>6. Responsabilidad:</strong> MundoClick no se responsabiliza por daños indirectos o mal uso del sitio.</p>
-      <p><strong>7. Modificaciones:</strong> Podemos cambiar los términos. Te avisaremos por los medios apropiados.</p>
-    </div>
-  </div>
-
-  <script>
-    function togglePassword() {
-      const pass = document.getElementById("password");
-      const toggle = document.querySelector(".toggle-password");
-      if (pass.type === "password") {
-        pass.type = "text";
-        toggle.textContent = "Ocultar";
-      } else {
-        pass.type = "password";
-        toggle.textContent = "Mostrar";
+    <script>
+      function togglePassword() {
+        const pass = document.getElementById("password");
+        const toggle = document.querySelector(".toggle-password");
+        if (pass.type === "password") {
+          pass.type = "text";
+          toggle.textContent = "Ocultar";
+        } else {
+          pass.type = "password";
+          toggle.textContent = "Mostrar";
+        }
       }
-    }
 
-    function mostrarTerminos() {
-      document.getElementById("modal-terminos").style.display = "flex";
-    }
-
-    function cerrarModal() {
-      document.getElementById("modal-terminos").style.display = "none";
-    }
-
-    function validarRegistro() {
-      const pass = document.getElementById("password").value;
-      const confirm = document.getElementById("confirm-password").value;
-      if (pass !== confirm) {
-        alert("Las contraseñas no coinciden.");
-        document.getElementById("confirm-password").focus();
-        return false;
+      function mostrarTerminos() {
+        document.getElementById("modal-terminos").style.display = "flex";
       }
-      alert("Registro exitoso. ¡Bienvenido a MundoClick!");
-      return true;
-    }
-  </script>
-</body>
+
+      function cerrarModal() {
+        document.getElementById("modal-terminos").style.display = "none";
+      }
+
+      function validarRegistro() {
+        const pass = document.getElementById("password").value;
+        const confirm = document.getElementById("confirm-password").value;
+        if (pass !== confirm) {
+          alert("Las contraseñas no coinciden.");
+          document.getElementById("confirm-password").focus();
+          return false;
+        }
+        alert("Registro exitoso. ¡Bienvenido a MundoClick!");
+        return true;
+      }
+    </script>
+  </body>
 </html>
