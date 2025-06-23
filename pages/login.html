@@ -1,11 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - MundoClick</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <style>
+      :root {
+        --fondo: #0d1321;
+        --primario: #1d2d44;
+        --acento: #fca311;
+        --claro: #ffffff;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lato", sans-serif;
+      }
+      body {
+        background: var(--fondo)
+          url("https://www.transparenttextures.com/patterns/cubes.png");
+        background-size: auto;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .login-container {
+        background: #f4f4f4;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        display: flex;
+        max-width: 900px;
+        overflow: hidden;
+        width: 100%;
+      }
+      .login-image {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        padding: 20px;
+      }
+      .login-image img {
+        max-width: 250px;
+        animation: float 4s ease-in-out infinite;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      .login-form {
+        flex: 1;
+        padding: 40px;
+        background-color: #eaeaea;
+      }
+      .login-form h2 {
+        text-align: center;
+        color: var(--primario);
+        margin-bottom: 30px;
+      }
+      .input-group {
+        position: relative;
+        margin-bottom: 20px;
+      }
+      .input-group i {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+      }
+      .input-group input {
+        width: 100%;
+        padding: 12px 16px 12px 40px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+      }
+      button {
+        width: 100%;
+        padding: 12px;
+        background: var(--primario);
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+      }
+      button:hover {
+        background: #0f1a2d;
+        transform: scale(1.02);
+      }
+      .btn-social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 10px;
+      }
+      .google-btn {
+        background: #fff;
+        border: 1px solid #ccc;
+        color: var(--primario);
+      }
+      .facebook-btn {
+        background: #4267b2;
+        color: #fff;
+      }
+      .extra-links {
+        text-align: center;
+        font-size: 0.9em;
+      }
+      .extra-links a {
+        color: var(--primario);
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .forgot {
+        text-align: right;
+        font-size: 0.9em;
+        margin-bottom: 15px;
+      }
+      .forgot a {
+        color: var(--primario);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="login-container">
+      <div class="login-image">
+        <img src="../assets/img/logo_MC.png" alt="Logo de MundoClick" />
+      </div>
+      <div class="login-form">
+        <h2>Bienvenido a MundoClick</h2>
+        <form>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input
+              type="email"
+              name="email"
+              placeholder="Usuario o Email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              name="password"
+              placeholder="Contraseña"
+              required
+            />
+          </div>
+          <div class="forgot">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+          <button type="submit">Iniciar Sesión</button>
+          <button type="button" class="btn-social google-btn">
+            <img
+              src="../assets/img/google-icon.png.svg"
+              width="20"
+              alt="Google icon"
+            />
+            Continuar con Google
+          </button>
+          <button type="button" class="btn-social facebook-btn">
+            <img
+              src="../assets/img/facebook-icon.png.svg"
+              width="20"
+              alt="Facebook icon"
+            />
+            Continuar con Facebook
+          </button>
+          <div class="extra-links">
+            <p>
+              ¿No tenés cuenta? <a href="register.html">Crear una cuenta</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
