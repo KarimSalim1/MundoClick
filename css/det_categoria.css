@@ -13,14 +13,19 @@
 }
 
 /* Globales */
-
 h1{
     font-size: 3rem;
+    color: white;
 }
 
 h2{
     font-size: 2.5rem;
     color: #ccc
+}
+
+h3{
+  font-size: 2.2rem;
+  color: var(--colorCuarto);
 }
 
 body {
@@ -32,7 +37,7 @@ body {
 
 /* Header */
 .header {
-  background: url(../assets/img/fondo.png) center center/cover; /* no repeat significa que: Si la imagen es más pequeña que el elemento, no se multiplicará para llenar el espacio. */
+  background: url(../assets/img/fondotech.png) center center/cover; /* no repeat significa que: Si la imagen es más pequeña que el elemento, no se multiplicará para llenar el espacio. */
   background-repeat: no-repeat;
   height: 280px;
   position: relative;
@@ -47,14 +52,13 @@ body {
 }
 
 .header h1 {
-  color: white;
   text-shadow: 2px 2px 8px #000;
 }
 
 .header img{
-    position: absolute;
-    right: 0;
-    width: 20rem;
+  position: absolute;
+  right: 0;
+  width: 20rem;
 }
 
 /* Intro */
@@ -63,9 +67,7 @@ body {
   margin: 40px 20px;
 }
 
-
 /* Productos */
-
 .productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -87,7 +89,8 @@ body {
 }
 
 .producto:hover {
-  transform: translateY(-7px);
+  transform: translateY(-7px) scale(1.05);
+  background-color: #eeeeee;
 }
 
 .producto img {
@@ -98,9 +101,7 @@ body {
 }
 
 .producto h3 {
-  font-size: 2.2rem; 
   margin-bottom: 10px;
-  color: var(--colorCuarto);
 }
 
 .producto p {
@@ -113,7 +114,6 @@ body {
 }
 
 /* Paginación */
-
 .paginacion {
   display: flex;
   justify-content: center;
@@ -121,8 +121,8 @@ body {
   padding: 30px;
 }
 .paginacion a{
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 .paginacion button {
   background-color: #1f2228;
@@ -139,24 +139,22 @@ body {
 }
 
 /* Carrusel */ 
-
 .slider{
-    width: 95vw;
-    padding-top: 2rem ;
-    height: 220px;
-    margin: auto;
-    overflow: hidden;
-    
+  width: 95vw;
+  padding-top: 2rem ;
+  height: 220px;
+  margin: auto;
+  overflow: hidden;   
 }
 
-.slider .slide-track{
-    display: flex;
-    animation: scroll 25s linear infinite; /* Esto hace que el slider se mueva a la izq durante 20s de forma infinita */
-    width: calc(200px * 18 ); /* hace que el carrusel tenga el ancho justo para mostrar las 18 imágenes una al lado de la otra */
+.slider .slide-container{
+  display: flex;
+  animation: scroll 25s linear infinite; /* Esto hace que el slider se mueva a la izq durante 20s de forma infinita */
+  width: calc(200px * 18 ); /* hace que el carrusel tenga el ancho justo para mostrar las 18 imágenes una al lado de la otra */
 }
 
 .slider .slide{  /* Definimos el tamaño fijo de cada imagen en el carrusel */
-    width: 200px;
+  width: 200px;
 }
 
 .slider .slide img{  
@@ -173,7 +171,6 @@ body {
 }
 
 /* PARA MOVERSE ENTRE CATEGORIAS */
-
 .mov_categorias{
   text-align: center; 
 }

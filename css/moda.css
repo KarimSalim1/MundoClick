@@ -15,14 +15,13 @@
 }
 
 .header_moda h1 {
-  color: white;
   text-shadow: 2px 2px 8px #000;
 }
 
 .header_moda img{
-    position: absolute;
-    right: 0;
-    width: 20rem;
+  position: absolute;
+  right: 0;
+  width: 20rem;
 }
 
 /* Intro */
@@ -32,9 +31,8 @@
 }
 
 /* Carrusel */ 
-
 .slider{
-    height: 310px;
+  height: 310px;
 }
 
 /* PARA MOVERSE ENTRE CATEGORIAS */
