@@ -16,6 +16,20 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+.magic-footer {
+    background: linear-gradient(135deg, #0D1321, #1D2D44);
+    padding: 60px 20px 20px;
+    animation: gradientShift 10s infinite alternate;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+
 body {
     background-color: var(--dark);
     color: var(--text);
@@ -44,6 +58,7 @@ header {
     max-width: 1600px;
     margin: 0 auto;
     position: relative;
+
 }
 
 .logo {
@@ -101,11 +116,13 @@ header {
     border: 1px solid rgba(100, 255, 218, 0.1);
 }
 
-.search-input:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 15px rgba(0, 198, 255, 0.3);
-    border: 1px solid var(--accent);
+
+.footer-contact h4, .footer-links h4, .footer-social h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #4e78af;
+    text-transform: uppercase;
+
 }
 
 
@@ -153,6 +170,7 @@ header {
     width: 100%;
 }
 
+
 .btn {
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
@@ -162,6 +180,7 @@ header {
     transition: all 0.3s ease;
     border: none;
 }
+
 
 .btn-login {
     background: transparent;
@@ -209,6 +228,20 @@ header {
     justify-content: center;
     font-size: 0.7rem;
     font-weight: bold;
+}
+
+
+
+@media (min-width: 576px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /*responsive*/
