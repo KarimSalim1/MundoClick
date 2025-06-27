@@ -1,14 +1,8 @@
-/* Fuente general */
-body {
-  font-family: 'Outfit', sans-serif;
-  background: linear-gradient(145deg, #0f172a, #1e293b);
-  color: #f8fafc;
- 
-}
+
 
 .contenedor-contacto {
   max-width: 1200px;
-  margin: auto;
+  margin: 10rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
