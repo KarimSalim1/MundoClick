@@ -9,6 +9,8 @@ main{
 }
 
 
+
+
 .seccion-titulo {
   
   text-transform: uppercase;
@@ -136,6 +138,8 @@ main{
   color: #1d2d44;
   animation: pulse 2s infinite;
   font-weight: bold;
+  height: 100px;
+  
 }
 
 @keyframes pulse {

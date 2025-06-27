@@ -1,9 +1,13 @@
+
+
 /* Header */
 .header_moda {
+  margin-top: 5%;
   background: url(../assets/img/ropa/fondoMODA.jpg) center center/cover; 
   background-repeat: no-repeat; /* no repeat significa que: Si la imagen es más pequeña que el elemento, no se multiplicará para llenar el espacio. */
   height: 280px;
   position: relative;
+  
 }
 
 .header_moda .titulo_moda { 

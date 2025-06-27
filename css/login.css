@@ -98,6 +98,9 @@
         background: #0f1a2d;
         transform: scale(1.02);
       }
+      .textodecuenta {
+        color: black;
+      }
       .btn-social {
         display: flex;
         align-items: center;

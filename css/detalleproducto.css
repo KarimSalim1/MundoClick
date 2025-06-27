@@ -7,35 +7,17 @@
       --colorDorado: #FFD700;       /* Títulos y precios resaltados */
     }
     
-    /* Reset y estilos globales */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     
-    body {
-      font-family: Arial, sans-serif;
-      background: var(--colorPrincipal);
-      color: #fff;
-      line-height: 1.6;
-    }
     
-    header {
-      background: var(--colorSecundario);
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid var(--colorCuarto);
+    main{
+      min-height: 100vh;
     }
-    
-    header h1 {
-      font-size: 2rem;
-      color: #fff;
-    }
+  
     
     .product-container {
-      max-width: 1200px;
-      margin: 40px auto;
+      max-width: 1000px;
+      margin-top: 10%;
+      margin-left: 20%;
       padding: 20px;
     }
     
