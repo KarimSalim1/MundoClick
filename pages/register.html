@@ -9,47 +9,35 @@
     <title>Registro - MundoClick</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   </head>
   <body>
     <main class="register-container">
       <div class="register-image">
-        <img src="../assets/img/logo_MC.png" alt="Logo MundoClick" />
+        <img src="/assets/img/logo_MC.png" alt="Logo MundoClick"/>
       </div>
-
       <form class="register-form" >
-        <h2>Crear una cuenta</h2>
+        <h2 class="crear cuenta">Crear una cuenta</h2>
         <p class="slogan">
           Tu experiencia comienza aquí. Registrate y descubrí todo lo que
           MundoClick tiene para vos.
         </p>
-
         <div class="input-group">
           <i class="fas fa-user"></i>
           <input
             type="text"
             id="nombre"
             name="nombre"
-            placeholder="Nombre y Apellido *"
-            required
-          />
+            placeholder="Nombre y Apellido*"required/>
         </div>
-
         <div class="input-group">
           <i class="fas fa-user-circle"></i>
           <input
             type="text"
             id="usuario"
             name="usuario"
-            placeholder="Nombre de usuario *"
-            required
-          />
+            placeholder="Nombre de usuario *" required/>
         </div>
-
         <div class="input-group">
           <i class="fas fa-envelope"></i>
           <input
@@ -57,10 +45,8 @@
             id="email"
             name="email"
             placeholder="Email *"
-            required
-          />
+            required/>
         </div>
-
         <div class="input-group">
           <i class="fas fa-phone"></i>
           <input
@@ -68,10 +54,8 @@
             id="telefono"
             name="telefono"
             placeholder="Teléfono *"
-            required
-          />
+            required/>
         </div>
-
         <div class="input-group">
           <i class="fas fa-home"></i>
           <input
@@ -79,10 +63,8 @@
             id="domicilio"
             name="domicilio"
             placeholder="Domicilio *"
-            required
-          />
+            required/>
         </div>
-
         <div class="input-group">
           <i class="fas fa-mail-bulk"></i>
           <input
@@ -90,10 +72,8 @@
             id="cp"
             name="cp"
             placeholder="Código Postal *"
-            required
-          />
+            required/>
         </div>
-
         <div class="input-group">
           <i class="fas fa-lock"></i>
           <input
@@ -102,13 +82,9 @@
             name="password"
             placeholder="Contraseña *"
             required
-            minlength="8"
-          />
-          <span class="toggle-password" 
-            >Mostrar</span
-          >
+            minlength="8"/>
+          <span class="toggle-password">Mostrar</span>
         </div>
-
         <div class="input-group">
           <i class="fas fa-lock"></i>
           <input
@@ -116,10 +92,8 @@
             id="confirm-password"
             name="confirm-password"
             placeholder="Confirmar contraseña *"
-            required
-          />
+            required/>
         </div>
-
         <div class="terms">
           <input type="checkbox" id="aceptar-terminos" required />
           <label for="aceptar-terminos">
@@ -128,57 +102,14 @@
             de MundoClick
           </label>
         </div>
-
         <button type="submit">Registrarse</button>
-
         <div class="note">
-          <p><span>*</span> Campos obligatorios</p>
+          <p class="campos obligatorios"><span>*</span> Campos obligatorios</p>
         </div>
-
         <div class="back-login">
-          <p>¿Ya tenés cuenta? <a href="login.html">Iniciar sesión</a></p>
+          <p class="ya tenes cuenta">¿Ya tenés cuenta? <a href="login.html">Iniciar sesión</a></p>
         </div>
       </form>
     </main>
-
-    <div id="modal-terminos" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>Términos y Condiciones de MundoClick</h3>
-        <p>
-          <strong>1. Aceptación del usuario:</strong> Al registrarte en
-          MundoClick, aceptás estos Términos y Condiciones. Si no estás de
-          acuerdo, no uses nuestros servicios.
-        </p>
-        <p>
-          <strong>2. Uso de la plataforma:</strong> Te comprometés a dar datos
-          reales, mantener tu cuenta segura y no usar MundoClick para fines
-          ilegales.
-        </p>
-        <p>
-          <strong>3. Privacidad:</strong> Usamos tus datos solo para ofrecerte
-          el servicio. Nunca los compartimos sin tu permiso salvo obligación
-          legal.
-        </p>
-        <p>
-          <strong>4. Productos y precios:</strong> Pueden cambiar sin previo
-          aviso. No garantizamos stock permanente.
-        </p>
-        <p>
-          <strong>5. Envíos y devoluciones:</strong> Los envíos tienen tiempos
-          estimados. Las devoluciones se permiten si el producto llegó dañado o
-          equivocado.
-        </p>
-        <p>
-          <strong>6. Responsabilidad:</strong> MundoClick no se responsabiliza
-          por daños indirectos o mal uso del sitio.
-        </p>
-        <p>
-          <strong>7. Modificaciones:</strong> Podemos cambiar los términos. Te
-          avisaremos por los medios apropiados.
-        </p>
-      </div>
-    </div>
-
   </body>
 </html>

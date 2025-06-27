@@ -4,14 +4,12 @@
         --acento: #fca311;
         --claro: #ffffff;
       }
-
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: "Lato", sans-serif;
       }
-
       body {
         background-color: var(--fondo);
         min-height: 100vh;
@@ -20,9 +18,8 @@
         justify-content: center;
         padding: 20px;
       }
-
       .register-container {
-        background: #f4f4f4;
+        background: var(--claro);
         border-radius: 20px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         display: flex;
@@ -32,7 +29,6 @@
         overflow: hidden;
         animation: fadeIn 0.8s ease-in-out;
       }
-
       .register-image {
         flex: 1;
         background: var(--primario);
@@ -55,7 +51,7 @@
       .register-form {
         flex: 1;
         padding: 40px;
-        background-color: #eaeaea;
+        background-color:var(--claro);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -149,9 +145,8 @@
         margin-top: 10px;
         text-align: center;
       }
-
       .note span {
-        color: red;
+        color:red;
       }
 
       .back-login {
@@ -168,36 +163,7 @@
       .back-login a:hover {
         color: var(--acento);
       }
-
-      .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 999;
-      }
-
-      .modal-content {
-        background-color: #fff;
-        padding: 20px;
-        width: 80%;
-        max-width: 600px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      }
-
-      .close {
-        float: right;
-        font-size: 22px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-
+/* animaciones */
       @keyframes fadeIn {
         from {
           opacity: 0;
@@ -220,7 +186,7 @@
           transform: scale(1);
         }
       }
-
+/* responsive */
       @media (max-width: 768px) {
         .register-container {
           flex-direction: column;

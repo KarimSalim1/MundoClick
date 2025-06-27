@@ -1,4 +1,4 @@
- :root {
+:root {
         --fondo: #0d1321;
         --primario: #1d2d44;
         --acento: #fca311;
@@ -21,7 +21,7 @@
         padding: 20px;
       }
       .login-container {
-        background: #f4f4f4;
+        background: var(--claro);
         border-radius: 20px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         display: flex;
@@ -55,7 +55,7 @@
       .login-form {
         flex: 1;
         padding: 40px;
-        background-color: #eaeaea;
+        background-color: var(--claro);
       }
       .login-form h2 {
         text-align: center;
@@ -92,7 +92,7 @@
         width: 100%;
         padding: 12px;
         background: var(--primario);
-        color: #fff;
+        color:var(--claro);
         font-weight: bold;
         border: none;
         border-radius: 10px;
@@ -113,13 +113,13 @@
         border-radius: 10px;
       }
       .google-btn {
-        background: #fff;
+        background: var(--claro);
         border: 1px solid #ccc;
         color: var(--primario);
       }
       .facebook-btn {
         background: #4267b2;
-        color: #fff;
+        color: var(--claro);
       }
       .extra-links {
         text-align: center;
@@ -138,4 +138,11 @@
       .forgot a {
         color: var(--primario);
         text-decoration: none;
+      }
+/* responsive */
+       @media (max-width: 768px) {
+         .login-container {
+          flex-direction: column;
+
+        }
       }
