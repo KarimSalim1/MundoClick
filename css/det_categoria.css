@@ -1,0 +1,192 @@
+:root{
+    --colorPrincipal: #0D1321;
+    --colorSecundario: #1D2D44;
+    --colorTerciario: #3E5C76;
+    --colorCuarto: #748CAB;
+    --colorQuinto: #F0EBD8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Globales */
+h1{
+    font-size: 3rem;
+    color: white;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: #ccc
+}
+
+h3{
+  font-size: 2.2rem;
+  color: var(--colorCuarto);
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--colorPrincipal);
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background: url(../assets/img/fondotech.png) center center/cover; /* no repeat significa que: Si la imagen es más pequeña que el elemento, no se multiplicará para llenar el espacio. */
+  background-repeat: no-repeat;
+  height: 280px;
+  position: relative;
+}
+
+.header .titulo { 
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  text-shadow: 2px 2px 8px #000;
+}
+
+.header img{
+  position: absolute;
+  right: 0;
+  width: 20rem;
+}
+
+/* Intro */
+.subtitulo {
+  text-align: center;
+  margin: 40px 20px;
+}
+
+/* Productos */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Crea tantas columnas como entren en el ancho disponible, cada una con un mínimo de 280px.
+  Las columnas se expanden automáticamente si hay espacio (por el 1fr). */
+  gap: 40px;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.producto {
+  background-color: rgb(247, 247, 247);
+  padding: 28px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.926);
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-7px) scale(1.05);
+  background-color: #eeeeee;
+}
+
+.producto img {
+  max-width: 100%;
+  height: 240px; 
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.producto h3 {
+  margin-bottom: 10px;
+}
+
+.producto p {
+  font-size: 1.2rem; 
+  color: #b0bec5;
+}
+
+.producto a{
+  text-decoration: none;
+}
+
+/* Paginación */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px;
+}
+.paginacion a{
+  text-decoration: none;
+  color: white;
+}
+.paginacion button {
+  background-color: #1f2228;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.paginacion button:hover {
+  background-color: #2e323a;
+}
+
+/* Carrusel */ 
+.slider{
+  width: 95vw;
+  padding-top: 2rem ;
+  height: 220px;
+  margin: auto;
+  overflow: hidden;   
+}
+
+.slider .slide-container{
+  display: flex;
+  animation: scroll 25s linear infinite; /* Esto hace que el slider se mueva a la izq durante 20s de forma infinita */
+  width: calc(200px * 18 ); /* hace que el carrusel tenga el ancho justo para mostrar las 18 imágenes una al lado de la otra */
+}
+
+.slider .slide{  /* Definimos el tamaño fijo de cada imagen en el carrusel */
+  width: 200px;
+}
+
+.slider .slide img{  
+    width: 100%; /* Igual al tamaño del contenedor (200px) */
+}
+
+@keyframes scroll {  /* Creamos un animacion llamada scroll */
+    0% { /* Cuando empiece */
+        transform: translateX(0);
+    }
+    100% { /* Cuando llegue al 100% */
+        transform: translateX(calc(-200px * 9)); /* Mueve el elemento 1800 píxeles hacia la izquierda. */
+    }
+}
+
+/* PARA MOVERSE ENTRE CATEGORIAS */
+.mov_categorias{
+  text-align: center; 
+}
+.mov_categorias button{
+  padding: 1rem; 
+  border-radius: 2rem;
+  background-color: var(--colorQuinto);
+  transition: background-color 0.3s ease;
+}
+.mov_categorias a{
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.mov_categorias button:hover{
+  background-color:#f9ffbd;
+}
