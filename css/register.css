@@ -4,19 +4,10 @@
         --acento: #fca311;
         --claro: #ffffff;
       }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Lato", sans-serif;
-      }
+
       body {
         background-color: var(--fondo);
         min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
       }
       .register-container {
         background: var(--claro);
