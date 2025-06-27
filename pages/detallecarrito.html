@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compras</title>
+  <link rel="shortcut icon" href="/assets/img/logo_MC.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/detallecarrito.css" />
+</head>
+<body>
+
+<main class="container">
+  <h1 class="titulo-principal">🛒 Carrito de Compras</h1>
+
+  <section class="carrito">
+    
+
+    <table class="tabla-productos">
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="fade-in">
+          <td><img src="/assets/img/silla gamer.jpg" alt="Silla Gamer"></td>
+          <td>Silla Gamer Hygenx</td>
+          <td>$387.846</td>
+          <td>1</td>
+          <td>$387.846</td>
+          <td><a href="#" class="icono">🗑</a></td>
+        </tr>
+        <tr class="fade-in delay-1">
+          <td><img src="/assets/img/placa.jpg" alt="Mother ASUS"></td>
+          <td>Mother ASUS ROG STRIX</td>
+          <td>$570.400</td>
+          <td>1</td>
+          <td>$570.400</td>
+          <td><a href="#" class="icono">🗑</a></td>
+        </tr>
+        <tr class="fade-in delay-2">
+          <td><img src="/assets/img/placa2.jpg" alt="RTX 4070"></td>
+          <td>Placa de Video RTX 4070</td>
+          <td>$899.000</td>
+          <td>1</td>
+          <td>$899.000</td>
+          <td><a href="#" class="icono">🗑</a></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" class="total-label">💳 Total a Pagar</td>
+          <td colspan="2" class="total-precio">$1.857.246</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="card-envio">
+      <h3>🚚 Envío</h3>
+      <div class="envio-input">
+        <input type="text" placeholder="9410" />
+        <span class="icon-truck">📦</span>
+      </div>
+      <p class="sub-text">Ingresá tu código postal para calcular el costo de envío</p>
+
+      <div class="opciones-envio">
+        <div class="opcion activa">» OCA <br> Domicilio <br> <span>$52.143</span></div>
+        <div class="opcion activa">» OCA <br> Sucursal <br> <span>$55.294</span></div>
+        <div class="opcion deshabilitada">Correo Arg <br> Domicilio <br> <span>—</span></div>
+        <div class="opcion deshabilitada">Pickit <br> Sucursal <br> <span>—</span></div>
+      </div>
+
+      <p class="agregar-envio">Agregar otro método desde <a href="#">aquí</a>.</p>
+    </div>
+
+    <div class="botones-container">
+      <button class="btn seguir">← Seguir comprando</button>
+      <button class="btn comprar">Comprar ahora →</button>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
