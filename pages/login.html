@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/img/logo_MC.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login - MundoClick</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"/>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon"><img src="/assets/img/logo_MC.png" width="50px" alt=""></div>
+                <div class="logo-text">MundoClick</div>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Buscar productos...">
+            </div>
+            <div class="nav-links">
+                <a class="nav-item" href="../index.html">Inicio</a>
+                <a class="nav-item">Categorias</a>
+                <a class="nav-item" href="./acercanosotros.html">Acerca de Nosotros</a>
+                <a class="nav-item" href="./contacto.html">Contacto</a>
+                </div>
+            <div class="nav-right-elements">
+          <div class="nav-item cart-icon">
+            🛒
+            <span class="cart-count">3</span>
+          </div>
+        <a href="/pages/login.html"><button class="btn btn-login">Login</button></a>
+        <a href="/pages/register.html"><button class="btn btn-signup">Registrarse</button></a>
+    </div>
+    </header>
+    
+    <main class="login-container">
+      <div class="login-image">
+        <img src="/assets/img/logo_MC.png" alt="Logo de MundoClick" />
+      </div>
+      <div class="login-form">
+        <h2>Bienvenido a MundoClick</h2>
+        <form>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Usuario o Email"
+              required/>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Contraseña"
+              required/>
+            <span class="toggle-password">Mostrar</span>
+          </div>
+          <div class="forgot">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+          <button type="submit">Iniciar Sesión</button>
+          <button type="button" class="btn-social google-btn">
+            <img src="../assets/img/google-icon.png.svg" width="20" alt="Google icon"/>
+            Continuar con Google</button>
+          <button type="button" class="btn-social facebook-btn">
+            <img
+              src="../assets/img/facebook-icon.png.svg" width="20" alt="Facebook icon"/>Continuar con Facebook</button>
+            <div class="extra-links">
+            <p class="texto de cuenta">
+              ¿No tenés cuenta? <a href="register.html">Crear una cuenta</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

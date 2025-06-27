@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/assets/img/logo_MC.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Registro - MundoClick</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  </head>
+  <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon"><img src="/assets/img/logo_MC.png" width="50px" alt=""></div>
+                <div class="logo-text">MundoClick</div>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Buscar productos...">
+            </div>
+            <div class="nav-links">
+                <a class="nav-item" href="../index.html">Inicio</a>
+                <a class="nav-item">Categorias</a>
+                <a class="nav-item" href="./acercanosotros.html">Acerca de Nosotros</a>
+                <a class="nav-item" href="./contacto.html">Contacto</a>
+                </div>
+            <div class="nav-right-elements">
+          <div class="nav-item cart-icon">
+            🛒
+            <span class="cart-count">3</span>
+          </div>
+        <a href="/pages/login.html"><button class="btn btn-login">Login</button></a>
+        <a href="/pages/register.html"><button class="btn btn-signup">Registrarse</button></a>
+    </div>
+    </header>
+    
+  <body>
+    <main class="register-container">
+      <div class="register-image">
+        <img src="/assets/img/logo_MC.png" alt="Logo MundoClick"/>
+      </div>
+      <form class="register-form" >
+        <h2 class="crear cuenta">Crear una cuenta</h2>
+        <p class="slogan">
+          Tu experiencia comienza aquí. Registrate y descubrí todo lo que
+          MundoClick tiene para vos.
+        </p>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Nombre y Apellido*"required/>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-user-circle"></i>
+          <input
+            type="text"
+            id="usuario"
+            name="usuario"
+            placeholder="Nombre de usuario *" required/>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email *"
+            required/>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-phone"></i>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Teléfono *"
+            required/>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-home"></i>
+          <input
+            type="text"
+            id="domicilio"
+            name="domicilio"
+            placeholder="Domicilio *"
+            required/>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-mail-bulk"></i>
+          <input
+            type="text"
+            id="cp"
+            name="cp"
+            placeholder="Código Postal *"
+            required/>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Contraseña *"
+            required
+            minlength="8"/>
+          <span class="toggle-password">Mostrar</span>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Confirmar contraseña *"
+            required/>
+        </div>
+        <div class="terms">
+          <input type="checkbox" id="aceptar-terminos" required />
+          <label for="aceptar-terminos">
+            Acepto los
+            <a href="#" >Términos y Condiciones</a>
+            de MundoClick
+          </label>
+        </div>
+        <button type="submit">Registrarse</button>
+        <div class="note">
+          <p class="campos obligatorios"><span>*</span> Campos obligatorios</p>
+        </div>
+        <div class="back-login">
+          <p class="ya tenes cuenta">¿Ya tenés cuenta? <a href="login.html">Iniciar sesión</a></p>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
