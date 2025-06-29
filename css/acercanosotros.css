@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --colorPrincipal: #0D1321;
+    --colorSecundario: #1D2D44;
+    --colorTerciario: #3E5C76;
+    --colorCuarto: #748CAB;
+    --colorQuinto: #F0EBD8;
+    --fuentePrincipal: 'Poppins', sans-serif;
+}
+
+main{
+    min-height: 100vh;
+    margin: 2.6rem;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--colorPrincipal);
+  color: white;
+}
+
+h1 {
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+h2{
+    font-family: var(--fuentePrincipal);
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+}
+
+.acercaNosotros {
+  padding: 5rem 2rem;
+  margin: auto;
+  text-align: center;
+}
+
+.acercaNosotros h1 {
+    padding-bottom: 0.5rem;
+    color: var(--colorQuinto);
+}
+
+hr{
+    border: none;
+    border-top: 1px solid #ccc; /* Un gris claro para suavidad */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.descripcion {
+  font-size: 2.3rem;
+  color: gray;
+  line-height: 1.6; /* Espaciado entre líneas */
+  margin: 1rem;
+  padding-bottom: 1rem ;
+}
+
+.galeria{
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap; /* Si el contenido no entra en la fila, pasa a la siguiente */
+    justify-content: center;
+    gap: 2rem;
+}
+
+.galeria__miembro p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    line-height: 1.7;
+}
+
+#cargo {
+    color: rgb(165, 165, 165);
+    font-size: 1.3rem;
+}
+
+.galeria__imagen{
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    object-position: center top;  /* ajusta la imagen  */
+    clip-path: circle(170px);
+    transition: transform 0.3s;
+}
+
+.galeria__imagen:hover{
+    transform: scale(1.1);
+}
+
+/* SECCIÓN "QUE OFRECEMOS" */
+
+.titulo {  
+    margin-bottom: 2.2rem;
+    text-align: center;
+    color: var(--colorQuinto);
+}
+
+.bloques{
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 2rem;
+}
+@media (min-width: 768px) {
+    .bloques{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.bloque{
+    text-align: center;
+    background-color:#121a2c;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* desplazamientoX desplazamientoY desenfoque extensión color; */
+}
+
+.bloque__titulo{
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.bloque p{
+    color: rgb(165, 165, 165);
+    margin: 1rem;
+    font-size: 1.3rem;
+}
+
+.bloque__imagen{
+    width: 12%;
+}

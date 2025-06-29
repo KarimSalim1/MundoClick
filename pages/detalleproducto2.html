@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/logo_MC.webp" type="image/x-icon">
+    <title>Detalle Producto / MundoClick</title>
+    <link rel="stylesheet" href="../css/detalleproducto.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon"><img src="/assets/img/logo_MC.png" width="50px" alt=""></div>
+                <div class="logo-text">MundoClick</div>
+            </div>
+
+            <input type="checkbox" id="toggle-menu" hidden>
+            <label for="toggle-menu" class="hamburguesa">&#9776;</label>
+
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Buscar productos...">
+            </div>
+            <div class="nav-links">
+                <a class="nav-item" href="../index.html">Inicio</a>
+                <a class="nav-item" href="./error404.html">Categorias</a>
+                <a class="nav-item" href="./acercanosotros.html">Acerca de Nosotros</a>
+                <a class="nav-item" href="./contacto.html">Contacto</a>
+                </div>
+            <div class="nav-right-elements">
+          <div class="nav-item cart-icon">
+            🛒
+            <span class="cart-count">3</span>
+          </div>
+        <a href="/pages/login.html"><button class="btna btn-login">Login</button></a>
+        <a href="/pages/register.html"><button class="btna btn-signup">Registrarse</button></a>
+    </div>
+    </header>
+    
+    <main>
+          
+  <div class="product-container">
+    <!-- Título del Producto -->
+    <h2 class="product-title">Audífonos Gamer Razer Blackshark V2 X RZ0403240100R3M1 Classic Black</h2>
+    
+    <!-- Sección principal: Imagen y Datos del Producto -->
+    <div class="product-details">
+      <!-- Imagen con efecto zoom y modal -->
+ <div id="modal1" class="modal">
+  <a href="#" class="close-modal">&times;</a>
+  <img src="../assets/img/aurineg1.webp" alt="Producto Ampliado 2">
+</div>
+<div id="modal2" class="modal">
+  <a href="#" class="close-modal">&times;</a>
+  <img src="../assets/img/aurineg2.webp" alt="Producto Ampliado 2">
+</div>
+<div id="modal3" class="modal">
+  <a href="#" class="close-modal">&times;</a>
+  <img src="../assets/img/aurineg3.webp" alt="Producto Ampliado 3">
+</div>
+
+<div id="modal4" class="modal">
+  <a href="#" class="close-modal">&times;</a>
+  <img src="../assets/img/aurineg4.webp" alt="Producto Ampliado 4">
+</div>
+
+
+
+      <!-- Carrusel controlado por radios -->
+<div class="carousel-container-single">
+  <!-- Radios -->
+  <input type="radio" name="carousel" id="img1" checked>
+  <input type="radio" name="carousel" id="img2">
+  <input type="radio" name="carousel" id="img3">
+  <input type="radio" name="carousel" id="img4">
+
+  <!-- Imágenes principales -->
+  <div class="carousel-images">
+    <a href="#modal1"><img src="../assets/img/aurineg1.webp" alt="Producto 1" class="carousel-img img1"></a>
+    <a href="#modal2"><img src="../assets/img/aurineg2.webp" alt="Producto 2" class="carousel-img img2"></a>
+    <a href="#modal3"><img src="../assets/img/aurineg3.webp" alt="Producto 3" class="carousel-img img3"></a>
+    <a href="#modal4"><img src="../assets/img/aurineg4.webp" alt="Producto 4" class="carousel-img img4"></a>
+  </div>
+
+  <!-- Flechas -->
+  <div class="carousel-arrows">
+    <label for="img4" class="prev img1"></label>
+    <label for="img1" class="prev img2"></label>
+    <label for="img2" class="prev img3"></label>
+    <label for="img3" class="prev img4"></label>
+
+    <label for="img2" class="next img1"></label>
+    <label for="img3" class="next img2"></label>
+    <label for="img4" class="next img3"></label>
+    <label for="img1" class="next img4"></label>
+  </div>
+</div>
+
+<!-- Modales -->
+<div id="modal1" class="modal">
+  <a href="#" class="close-modal">&times;</a>
+  <img src="../assets/img/iphone12-removebg-preview.png" alt="Producto Ampliado 1">
+</div>
+<div id="modal2" class="modal">
+  <a href="#" class="close-modal">&times;</a>
+  <img src="../assets/img/iphone-alt1.png" alt="Producto Ampliado 2">
+</div>
+<div id="modal3" class="modal">
+  <a href="#" class="close-modal">&times;</a>
+  <img src="../assets/img/iphone-alt2.png" alt="Producto Ampliado 3">
+</div>
+<div id="modal4" class="modal">
+  <a href="#" class="close-modal">&times;</a>
+  <img src="../assets/img/iphone-alt3.png" alt="Producto Ampliado 4">
+</div>
+      <!-- Información: Precio, Calificación, Stock, Favorito y Botones -->
+      <div class="price-info">
+        <div class="price">
+          $81.000
+          <span class="favorite-container">
+            <input type="checkbox" id="fav">
+            <label for="fav" class="favorite-btn">&#10084;</label>
+          </span>
+        </div>
+        <div class="original-price">$90.000</div>
+        <div class="discount-price">Desc: $9.000</div>
+        
+        <!-- Calificación del producto -->
+        <div class="product-rating">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9734;</span>
+          <span class="rating-text">4.5/5</span>
+        </div>
+        
+        <p class="stock-info">Stock disponible: 15 unidades</p>
+        <div class="button-container">
+          <a href="/pages/error404.html"> <button class="buy-now">Comprar Ahora</button></a>
+          <a href="/pages/detallecarrito.html"><button class="add-cart">Agregar al Carrito</button></a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sección de Descripción del Producto -->
+    <div class="product-description">
+      <h3>Descripción del Producto</h3>
+      <p>
+        AURICULAR RAZER BLACKSHARK V2 X
+        <br>
+        EL SONIDO DE LOS ESPORTS
+        Haz frente a la competencia con unos cascos para Esports ligeros que se crecen ante la presión. Los Razer BlackShark V2 X son una amenaza triple por su sonido increíble, nitidez del micrófono superior y un aislamiento acústico inmejorable acreditado por profesionales.
+        <br>
+        DIAFRAGMAS DE 50 MM RAZER TRIFORCE
+        Nuestro diseño patentado permite a nuestros ingenieros ajustar cada diafragma de forma personalizada, lo cual hace que las réplicas individuales de frecuencias de audio altas, medias y bajas ofrezcan un sonido más claro, agudos más intensos y graves más potentes.
+        <br>
+        MICRÓFONO CARDIOIDE RAZER HYPERCLEAR
+        El micrófono flexible, que ofrece captación de voz y cancelación de ruido, tiene una cubierta optimizada que adopta un diseño más abierto para obstrucción mínima, lo que mejora la nitidez para una recreación más aproximada a tu voz real.
+        <br>
+        CANCELACIÓN PASIVA DE RUIDO AVANZADA
+        Ya sea el clamor de la multitud o el zumbido de tu equipo, podrás aislarte del ruido y disfrutar de una concentración sin interrupciones con los auriculares especialmente cerrados que cubren por completo las orejas, gracias a las almohadillas afelpadas que forman un sellado más hermético para mayor aislamiento del sonido.
+        <br>
+        LIGEREZA Y COMODIDAD
+        Con tan solo 240 gramos, casi ni te acordarás de que los llevas puestos en tus maratones de juego. Los auriculares son más cómodos gracias al relleno acolchado más grueso y a las almohadillas de espuma viscoelástica envueltas en una combinación de tejido transpirable y piel sintética afelpada.
+        <br>
+        SONIDO ENVOLVENTE 7.1
+        Aumenta tu nivel de concentración y no dejes que nada se escape a tus oídos con el audio posicional exacto, que te permite localizar intuitivamente de dónde viene cada sonido.
+        <br>
+        COMPATIBILIDAD MULTIPLATAFORMA
+        Estos auriculares ligeros para Esports usan un conector de 3,5 mm y son compatibles con las plataformas más populares, lo que te permite competir en PC, Mac, PS4, Xbox One, Nintendo Switch y dispositivos móviles.
+        <br>
+        ESPECIFICACIONES TÉCNICAS
+        <br>
+        A simple vista
+        <br>
+        - Diafragmas de 50 mm Razer TriForce para un rendimiento de audio de alta calidad
+        <br>
+        - Micrófono cardioide Razer HyperClear para una captura de voz mejorada
+        <br>
+        - Cancelación pasiva de ruido avanzada para una concentración ininterrumpida
+        <br>
+        - Diseño ligero de 240 gramos con almohadillas de espuma viscoelástica transpirable para una comodidad duradera
+        <br>
+        - Sonido envolvente 7.1 para una experiencia de audio posicional exacta
+        <br>
+
+        Auriculares
+        <br>
+        - Frecuencia de respuesta: 12 Hz–28 kHz
+        <br>
+        - Sensibilidad (a 1 KHz): 100 dBSPL/mW, 1 KHz
+        <br>
+        - Diafragmas: Diafragma personalizado dinámico de 50 mm
+        <br>
+        - Diámetro interno de la almohadilla: 63 mm x 43 mm / 2,48" x 1,69"
+        <br>
+        - Tipo de conexión: Analógica 3,5 mm
+        <br>
+        - Longitud del cable: 1,3 m/4,27 ft
+        <br>
+        - Peso aproximado: 240 g/0,53 lb.
+        <br>
+        - Almohadillas ovaladas: Almohadillas de espuma viscoelástica transpirables
+        <br>
+        Micrófono
+        <br>
+        - Frecuencia de respuesta: 100 Hz–10 kHz
+        <br>
+        - Relación señal/ruido: 60 dB
+        <br>
+        - Sensibilidad (a 1 kHz): -42 dB V/Pa, 1 KHz
+        <br>
+        - Patrón de captación: Unidireccional
+        <br>
+        Control en el auricular
+        <br>
+        - Aumento/disminución del volumen
+        <br>
+        - Conmutador de activación/desactivación del silencio del micrófono
+        <br>
+        Uso de audio
+        <br>
+        - Uso de audio: Dispositivos con conector de audio de 3,5 mm
+        <br>
+        - Sonido envolvente: *Solo disponible para Windows 10 de 64 bits
+      </p>
+    </div>
+    
+    <!-- Lista de Detalles del Producto -->
+    <ul class="product-details-list">
+      <li>Es inalambrico: No</li>
+      <li>Es resistente al agua: No</li>
+      <li>Con luz led: No</li>
+      <li>Con cancelacion de ruido: Si</li>
+      <li>Con microfono: Si</li>
+    </ul>
+    
+    <!-- Carrusel: Productos Similares -->
+    <h3 class="carousel-title">Productos Similares</h3>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_870949-MLU75009076878_032024-O.webp" alt="Producto Similar 1">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_632822-MLU79057566462_092024-O 5.webp" alt="Producto Similar 2">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_641796-MLA82181645483_012025-O 6.webp" alt="Producto Similar 3">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_657193-MLA76641237512_062024-O 7.webp" alt="Producto Similar 4">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_835955-MLA71723357567_092023-O 9.webp" alt="Producto Similar 5">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_761050-MLA54549022904_032023-O 8.webp" alt="Producto Similar 6">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_921632-MLU78228536063_082024-O 4.webp" alt="Producto Similar 7">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_876446-MCO46440811987_062021-O 2.webp" alt="Producto Similar 8">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Carrusel: Productos Recomendados -->
+    <h3 class="carousel-title">Productos Recomendados</h3>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_623727-MLA49916849354_052022-O 3.webp" alt="Producto Recomendado 1">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_747500-MLA74781249139_022024-O 11.webp" alt="Producto Recomendado 2">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_999434-MLA43532397665_092020-O 12.webp" alt="Producto Recomendado 3">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_870782-MLA80780604380_112024-O 13.webp" alt="Producto Recomendado 4">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_715945-MLA84840240837_052025-O 14.webp" alt="Producto Recomendado 5">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_840126-MLA82556213013_022025-O 15.webp" alt="Producto Recomendado 6">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_937141-MLA84498517192_052025-O 15.webp" alt="Producto Recomendado 7">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/D_NQ_NP_633849-MLA84535829332_052025-O 17.webp" alt="Producto Recomendado 8">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sección de Comentarios -->
+    <div class="comments-section">
+      <h2>Deja tu Comentario</h2>
+      
+      <!-- Calificación interactiva en comentarios (estrellas) -->
+      <div class="comment-rating">
+        <input type="radio" id="star5-comment" name="rating" value="5">
+        <label for="star5-comment" title="5 estrellas">&#9733;</label>
+        
+        <input type="radio" id="star4-comment" name="rating" value="4">
+        <label for="star4-comment" title="4 estrellas">&#9733;</label>
+        
+        <input type="radio" id="star3-comment" name="rating" value="3">
+        <label for="star3-comment" title="3 estrellas">&#9733;</label>
+        
+        <input type="radio" id="star2-comment" name="rating" value="2">
+        <label for="star2-comment" title="2 estrellas">&#9733;</label>
+        
+        <input type="radio" id="star1-comment" name="rating" value="1">
+        <label for="star1-comment" title="1 estrella">&#9733;</label>
+      </div>
+      
+      <textarea rows="5" placeholder="Escribe aquí tu comentario..."></textarea>
+      <a href="/pages/error404.html"><button>Enviar Comentario</button></a>
+    </div>
+  </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-contenido">
+                
+                <div class="footer-logo">           
+                    <img src="/assets/img/logo_MC.png" alt="" id="imgprincipal" class="footer-logo-img">
+                    <p class="footer-slogan">Un mundo de código.</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contáctanos</h4>
+                    <img src="/assets/img/contactanos.png" class="footer-logo-img"  alt="">
+                    <p><span class="contact-icon">✉️</span><a href=""><span class="__cf_email__" data-cfemail="610c080f1408154f0d040f060413080421060c00080d4f020e0c">[email&#160;protected]</span></a></p>
+                    <p><span class="contact-icon">📞</span><a href="https://wa.me/" target="_blank">+54 381 333 3333</a></p>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <img src="/assets/img/siguenos.png" class="footer-logo-img" alt="">
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                </svg> Instagram
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://wa.me/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                </svg> WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <img src="/assets/img/enlaces.png" class="footer-logo-img" alt="">
+                    <ul>
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="/pages/moda.html">Productos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Diseñado por MundoClick - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
