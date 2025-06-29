@@ -147,6 +147,7 @@ body {
 /* PARA MOVERSE ENTRE CATEGORIAS */
 .mov_categorias{
   text-align: center; 
+  padding-bottom: 1%;
 }
 .mov_categorias button{
   padding: 1rem; 
